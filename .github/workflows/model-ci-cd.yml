@@ -13,7 +13,7 @@ jobs:
           python-version: 3.12
       - name: Install Python Dependencies
         run: |
-          pip install --upgrade
+          pip install --upgrade pip
           pip install -r requirements.txt
       - name: Split dataset
         run: python src/0-split.dataset.py
