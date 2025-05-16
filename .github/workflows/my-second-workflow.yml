@@ -10,7 +10,18 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: 3.12
-      - name: Verify Pythonf
-        run: echo "python --version"
+      - name: Test model
+        run: echo "Test model"
 
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+      - name: Deploy model
+        run: echo "Deploy model to AWS"
 
